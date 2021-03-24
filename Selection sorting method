@@ -1,0 +1,25 @@
+#include<stdio.h>
+#define N 5
+int main(void)
+{
+    int s[N],i,j,k;
+    s[N]=0;
+    printf("Please input:\n");
+    for(i=0;i<N;i++)
+    scanf("%d",&s[i]);
+    for(i=0;i<N;i++)
+    {
+        for(j=i+1;j<=N;j++)
+        {
+            if(s[i]>s[j])
+            {
+                k=s[i];
+                s[i]=s[j];
+                s[j]=k;
+                }
+        }
+     }
+     for(i=0;i<N;i++)
+     printf("%d ",s[i]);
+return 0;
+}
