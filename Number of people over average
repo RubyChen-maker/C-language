@@ -1,0 +1,20 @@
+#include<stdio.h> 
+#define N 5
+int main(void)
+{int i,n;
+float s[N],sum,ave;
+n=0,sum=0;
+printf("Please input score:\n");
+for(i=0;i<N;i++)
+{
+scanf("%f",&s[i]);
+sum+=s[i];
+}
+  ave=1.0*sum/N;
+  for(i=0;i<N;i++)
+  {if(s[i]>ave)
+   n+=1;
+  }
+printf("average score:%.2f,number over the score:%d",ave,n);
+return 0;
+}
